@@ -1,10 +1,10 @@
 const favs = require('../utils/favs');
 
-const postFavorite = async function (req, res) {
+const postFavorite = function (req, res) {
     try {
-        if (req.body) {
-            const favs = await favs.push(req.body);
-            return res.status(200).json(req.body)
+        if (character) {
+            favs.push(character);
+            return res.status(200).json(character)
         };
     } catch (error) {
         return res.status(500).json(error);

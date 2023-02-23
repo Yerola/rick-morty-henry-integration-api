@@ -9,7 +9,7 @@ const deleteFavorite = require('../controllers/deleteFavorite');
 const router = Router();
 
 router.get("/rickandmorty/character/:id", getCharById);
-router.get("/detail/:id", getCharDetail);
+router.get("/rickandmorty/detail/:detailId", getCharDetail);
 router.get('/rickandmorty/fav', getFavorite);
 router.post('/rickandmorty/fav', postFavorite);
 router.delete('/rickandmorty/fav/:id', deleteFavorite);
