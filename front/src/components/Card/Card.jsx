@@ -47,26 +47,44 @@ const Caracteristicas = styled.h3`
   background-color: white;
 `;
 
-function Card(props) {
+function Card({ name, id, image, gender, species, addCharacter, deleteCharacter, myFavorites, onClose }) {
+
+  const character = {
+    name,
+    id,
+    image,
+    gender
+  }
+
   const [isFav, setIsFav] = React.useState(false);
 
   React.useEffect(() => {
-    props.myFavorites.forEach((fav) => {
-      if (fav.id === props.id) {
+    myFavorites.forEach((fav) => {
+      if (fav.id === id) {
         setIsFav(true);
       }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.myFavorites]);
+  }, [myFavorites]);
 
   const handleFavorite = () => {
     if (isFav) {
       setIsFav(false);
-      props.deleteCharacter(props.id);
+      deleteCharacter(id);
     }
     if (!isFav) {
       setIsFav(true);
-      props.addCharacter(props);
+      addCharacter(character);
+      /*
+const character = {
+        id: props.id,
+        name: props.name,
+        image: props.image,
+        species: props.species,
+        gender: props.gender,
+      };
+      props.addFavorite(character);
+      */
     }
   };
 
@@ -77,13 +95,13 @@ function Card(props) {
       ) : (
         <button onClick={handleFavorite}>🤍</button>
       )}
-      <Boton onClick={() => props.onClose(props.id)}>X</Boton>
-      <Imagen src={props.image} alt="img" />
-      <NavLink to={`/detail/${props.id}`}>
-        <center><Nombre>{props.name}</Nombre></center>
+      <Boton onClick={() => onClose(id)}>X</Boton>
+      <Imagen src={image} alt="img" />
+      <NavLink to={`/detail/${id}`}>
+        <center><Nombre>{name}</Nombre></center>
       </NavLink>
-      <center><Caracteristicas>{props.species}</Caracteristicas></center>
-      <center><Caracteristicas>{props.gender}</Caracteristicas></center>
+      <center><Caracteristicas>{species}</Caracteristicas></center>
+      <center><Caracteristicas>{gender}</Caracteristicas></center>
     </Container>
   );
 }

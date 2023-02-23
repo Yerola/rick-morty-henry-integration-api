@@ -24,12 +24,18 @@ const characters = [
   //   image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
   // },
 ]
-export const Yes = {
-  name: "Yesica Lato",
-  species: "Human",
-  gender: "Female",
-  image: "../src/imagenes/Yesica_Lato.jpg",
-};
+// export const Yes = {
+//   name: "Yesica Lato",
+//   species: "Human",
+//   gender: "Female",
+//   image: "../src/imagenes/Yesica_Lato.jpg",
+// };
+export const Rick = {
+  name: 'Rick Sanchez',
+  species: 'Human',
+  gender: 'Male',
+  image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
+}
 
 
 export default characters;

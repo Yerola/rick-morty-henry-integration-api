@@ -39,3 +39,29 @@ export default function Detail() {
    </div>;
    </Fragment >
 }
+/*
+ASYNC AWAIT en useEffect no tiene efecto, por ello debemos usar el .then 
+
+   useEffect(() => {
+      const detail = async function () {
+         try {
+         const result = await axios(
+            `http://localhost:3001/rickandmorty/character/${detailId}`
+         );
+         const char = result.data
+         if (char.name) {
+            console.log("------>", char);
+            setCharacter(char.data);
+         } else {
+            window.alert("No hay personajes con ese ID");
+         }
+         } catch (error) {
+         console.log(error);
+         }
+         return setCharacter({});
+      };
+      detail()
+   }, [detailId]);
+
+   NO está funcionando
+*/

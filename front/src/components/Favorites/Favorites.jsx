@@ -7,19 +7,20 @@ import { useDispatch } from "react-redux";
 import styles from "./Favorites.module.css";
 
 const Favorites = ({ myFavorites }) => {
-  const [favs, setFavs] = React.useState([])
+  //const [favs, setFavs] = React.useState([])
   React.useEffect(() => {
-    setFavs(myFavorites,)
+    //setFavs(myFavorites,)
 
   }, [myFavorites])
 
   const dispatch = useDispatch();
-  //   const onClose = (character) => {
-  //     setCharacters((characters) =>
-  //       characters.filter((element) => element.id !== character)
-  //     );
-  //   };
+  // const onClose = (character) => {
+  //   setCharacters((characters) =>
+  //     characters.filter((element) => element.id !== character)
+  //   );
+  // };
   const handleDispatch = (e) => {
+    e.preventDefault();
     if (e.target.value === "Ascendente" || e.target.value === "Descendente") {
       dispatch(orderCards(e.target.value));
     } else {
@@ -41,7 +42,7 @@ const Favorites = ({ myFavorites }) => {
           <option value="unknown">Desconocido</option>
         </select>
       </div>
-      {favs?.map(fav => (
+      {myFavorites.map(fav => (
         <Cards
           name={fav.name}
           id={fav.id}

@@ -27,10 +27,10 @@ function App() {
   const username = "ye_lato@yahoo.com.ar";
   const password = "12345678";
 
-  useEffect(() => {
-    onSearch(1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   onSearch(1);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     !access && navigate("/");

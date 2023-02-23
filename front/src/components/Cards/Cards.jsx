@@ -10,7 +10,8 @@ const Contenedor = styled.div`
 `;
 
 export default function Cards(props) {
-  const { characters } = props;
+  const { characters, onClose } = props;
+
   const element = characters.map((character) => (
     <Card
       name={character?.name}
@@ -20,8 +21,8 @@ export default function Cards(props) {
       origin={character.origin?.name}
       status={character.status}
       id={character?.id}
-      key={character?.name}
-      onClose={props?.onClose}
+      key={character?.id}
+      onClose={() => onClose(character?.id)}
     />
   ));
   return <Contenedor>{element}</Contenedor>;

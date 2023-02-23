@@ -11,9 +11,10 @@ export default function SearchBar(props) {
   return (
     <Contenedor>
       <Buscador
-        type="search"
+        type="text"
         name="search"
         id="#"
+        placeholder='Número de personaje...'
         onChange={(e) => setCharacterId((characterId = e.target.value))}
       />
       <Boton onClick={() => props.onSearch(characterId)}
