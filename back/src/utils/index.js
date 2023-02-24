@@ -1,9 +1,0 @@
-// modularizado en ../routes/server.js
-
-// const app = require("../App")
-
-// const PORT = 3001;
-
-// app.listen(PORT, () => {
-//   console.log("in server http://localhost: 3001")
-// });
