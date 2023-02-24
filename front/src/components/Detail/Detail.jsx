@@ -26,7 +26,7 @@ export default function Detail() {
       <center className={styles.info}>
          <h1>{character?.name}</h1>
          <p className={styles.a} value="status">Status: {character?.status}</p>
-         <p className={styles.a} value="especie">Especie: {character?.specie}</p>
+         <p className={styles.a} value="especie">Especie: {character?.species}</p>
          <p className={styles.a} value="genero">Género: {character?.gender}</p>
          <p className={styles.a} value="origen">Origen: {character.origin?.name}</p>
          <img src={character?.image} alt="img" />
