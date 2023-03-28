@@ -45,7 +45,7 @@ function App() {
       });
 
 
-      const objeto = await axios(`http://localhost:3001/rickandmorty/character/${character}`)
+      const objeto = await axios(`https://rickandmortyapi.com/api/character/${character}`)
       const personaje = objeto.data;
 
       if (personaje.name) {
