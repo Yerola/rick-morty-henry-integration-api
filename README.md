@@ -8,10 +8,11 @@
 
 🔹 Este es mi primer desarrollo front-end.
 
-> **Nota**:🧐 para loguearse utilizar las siguientes credenciales:
+> **Nota**:
+🧐 para loguearse se utilizaban las siguientes credenciales:
 Usuario: ye_lato@yahoo.com.ar
 Contraseña: 12345678
-
+Pero ya fueron anuladas a moodo deployment demostrativo.
 ---
 
 ### **Pasos para poder levantar la App**
