@@ -109,3 +109,10 @@
 .input:focus {
   border: 2px solid purple;
 }
+
+@media screen and (max-width: 600px) {
+  .spinnerContainer img {
+    width: 80%;
+    height: auto;
+  }
+}
